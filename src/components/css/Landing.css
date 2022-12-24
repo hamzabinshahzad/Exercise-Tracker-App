@@ -1,0 +1,54 @@
+.text {
+    font-family: serif;
+    font-size: 32px;
+    font-weight: 590;
+    color: white;
+}
+
+.section {
+    background-color: #36517E;
+}
+
+.left-side {
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.right-side {
+    margin-top: 50px;
+}
+
+.navbar {
+    margin: 0px 5rem;
+    gap: 884px;
+    padding: 7px 0px;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: aliceblue;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 6px;
+    color: black;
+}
+
+.nav-login {
+    height: 36px;
+    text-decoration: none;
+    background-color: #46C2CB;
+    padding: 2px 25px;
+    border: none;
+    border-radius: 27px;
+    color: black;
+}
+
+.nav-signup {
+    height: 36px;
+    text-decoration: none;
+    background-color: #FF735C;
+    padding: 2px 25px;
+    border: none;
+    border-radius: 27px;
+    color: black;
+}

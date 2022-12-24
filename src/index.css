@@ -11,3 +11,358 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+/* =================================================================== All custom styles =================================================================== */
+/* <<< home.css | :start: >>> */
+/* body,
+html {
+  margin: 0;
+}
+
+body {
+  background-color: #eee;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #263159;
+}
+
+.navbar-brand {
+  color: white;
+
+  font-size: medium;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-container {
+  margin: 0px 10px;
+}
+
+.nav-button {
+  min-height: 38px;
+  min-width: 20px;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+.brand-logo {
+  width: 118px;
+  height: 52px;
+}
+
+.container {
+  margin-top: 5vh;
+}
+
+.list-group {
+  outline: none;
+}
+
+.list-group-item {
+
+  height: 276px;
+  border-radius: 10px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+
+  width: 100%;
+  max-width: 100%;
+
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.418);
+}
+
+.col-md-4 {
+  text-align: center;
+  align-content: center;
+}
+
+.activity-button {
+  margin-left: 55px;
+}
+
+.activity-button button {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.418);
+}
+
+.activity-button button:hover {
+  background-color: #00B8A9;
+  color: white;
+}
+
+.user img {
+  width: 50px;
+  height: auto;
+
+  margin-left: 5px;
+}
+
+.c-details span {
+  font-weight: 300;
+  font-size: 13px
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 39px;
+}
+
+.icon img {
+  height: 80px;
+  width: 80px;
+}
+
+.icon:hover {
+  background-color: #00B8A9;
+  cursor: default;
+}
+
+.badge span {
+  width: 60px;
+  height: 25px;
+
+  padding: 2px 40px;
+
+  border: 2px solid #00B8A9;
+  border-radius: 10px;
+
+  display: flex;
+  color: #00B8A9;
+  justify-content: center;
+  align-items: center
+}
+
+.badge span:hover {
+  background-color: #00B8A9;
+  width: 60px;
+  height: 25px;
+
+  padding: 2px 40px;
+
+  border: 2px solid #00B8A9;
+  border-radius: 10px;
+
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+  cursor: default;
+}
+
+.text1 {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.card-btn {
+  font-size: small;
+  font-weight: 600;
+
+  padding: 3px 10px;
+  min-width: 30px;
+}
+
+.btn-outline-success {
+  color: #00B8A9;
+  border-color: #00B8A9;
+}
+
+.btn-outline-success:hover {
+  color: white;
+
+  background-color: #00B8A9;
+  border-color: #00B8A9;
+} */
+/* <<< home.css | :end: >>> */
+
+
+
+/* <<< landing.css | :start: >>> */
+/* .text {
+  font-family: serif;
+  font-size: 32px;
+  font-weight: 590;
+  color: white;
+}
+
+.section {
+  background-color: #36517E;
+}
+
+.left-side {
+  margin-top: 20px;
+  margin-left: 120px;
+}
+
+.right-side {
+  margin-top: 50px;
+}
+
+.navbar {
+  margin: 0px 5rem;
+  gap: 884px;
+  padding: 7px 0px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: aliceblue;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  color: black;
+}
+
+.nav-login {
+  height: 36px;
+  text-decoration: none;
+  background-color: #46C2CB;
+  padding: 2px 25px;
+  border: none;
+  border-radius: 27px;
+  color: black;
+}
+
+.nav-signup {
+  height: 36px;
+  text-decoration: none;
+  background-color: #FF735C;
+  padding: 2px 25px;
+  border: none;
+  border-radius: 27px;
+  color: black;
+} */
+/* <<< landing.css | :end: >>> */
+
+
+
+/* <<< modal.css | :start: >>> */
+/* .form-control {
+  width: 430px;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #d1dedf;
+}
+
+.form-select {
+  width: 430px;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #d1dedf;
+}
+
+textarea {
+  resize: none;
+
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  max-width: 200%;
+} */
+/* <<< modal.css | :end: >>> */
+
+
+
+/* <<< signin.css | :start: >>> */
+/* .divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+section {
+  background-color: #E5E5CB;
+}
+
+.form-outline {
+  width: 300px;
+  border-radius: 28px;
+}
+
+.btn {
+  width: 300px;
+  height: 35px;
+  background: #4C5B60;
+  border-radius: 2px;
+  font-size: 15px;
+  outline: none;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+
+.image-col {
+  background-color: #EAEAEA;
+}
+
+.form {
+  margin-top: 110px;
+} */
+/* <<< signin.css | :end: >>> */
+
+
+
+/* <<< signup.css | :start: >>> */
+/* .divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+section {
+  background-color: #E5E5CB;
+}
+
+.form-outline {
+  width: 270px;
+  border-radius: 28px;
+}
+
+.form-control {
+  height: 35px;
+}
+
+.btn {
+  width: 270px;
+  height: 35px;
+  background: #566e67;
+  border-radius: 2px;
+  font-size: 15px;
+  outline: none;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+
+.image-col {
+  background-color: #566e67;
+}
+
+
+.form {
+  margin-top: 60px;
+} */
+/* <<< signup.css | :end: >>> */
+/* =================================================================== All custom styles =================================================================== */

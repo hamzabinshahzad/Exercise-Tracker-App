@@ -1,0 +1,36 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+section {
+    background-color: #E5E5CB;
+}
+
+.form-outline {
+    width: 300px;
+    border-radius: 28px;
+}
+
+.btn {
+    width: 300px;
+    height: 35px;
+    background: #4C5B60;
+    border-radius: 2px;
+    font-size: 15px;
+    outline: none;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
+.image-col {
+    background-color: #EAEAEA;
+}
+
+.form {
+    margin-top: 110px;
+}

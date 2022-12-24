@@ -1,0 +1,9 @@
+.list-group {
+    outline: none;
+}
+
+.list-group-item {
+    
+    height: 276px;
+    border-radius: 10px;
+}

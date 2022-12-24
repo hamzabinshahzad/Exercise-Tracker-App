@@ -1,0 +1,22 @@
+.form-control{
+    width: 430px;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #d1dedf;
+}
+
+.form-select{
+    width: 430px;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #d1dedf;
+}
+
+textarea {
+    resize: none;
+    
+    height: 100px;
+    min-height: 100px;
+    max-height:100px;
+    max-width: 200%; 
+}

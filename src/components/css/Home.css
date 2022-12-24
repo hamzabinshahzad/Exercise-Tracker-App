@@ -1,0 +1,17 @@
+body, html {
+    margin: 0;
+}
+
+body {
+    background-color: #eee;
+    height: 100vh;
+}
+
+.container {
+    margin-top: 5vh;
+}
+
+.col-md-4 {
+    text-align: center;
+    align-content: center;
+}
