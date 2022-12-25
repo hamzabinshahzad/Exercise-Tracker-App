@@ -4,14 +4,18 @@ import ListActivities from './ListActivities';
 
 import './css/Home.css';
 
+// Provider
+import { UserActivitesProvider } from '../context/UserActivitesContext';
+
+
 const Home = () => {
     return (
-        <>
+        <UserActivitesProvider>
             <NavBar />
             <div className="container">
                 <ListActivities />
             </div>
-        </>
+        </UserActivitesProvider>
     );
 }
 

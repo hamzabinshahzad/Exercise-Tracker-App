@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './css/ActivityModal.css';
 
 // Context
 import { UserActivitiesContext } from '../context/UserActivitesContext';
 
-const NewActivityModal = () => {
+const UpdateActivityModal = () => {
     const user = useContext(UserActivitiesContext);
 
     const [activityName, setActivityName] = useState("");
@@ -12,6 +12,18 @@ const NewActivityModal = () => {
     const [activityDuration, setActivityDuration] = useState("");
     const [activityDate, setActivityDate] = useState("");
     const [activityDescription, setActivityDescription] = useState("");
+
+    useEffect(() => {
+        if(user.isUpdateId !== null) {
+            let activityIndex = user.activities.findIndex(activity => activity.id === user.isUpdateId);
+            alert(activityIndex);
+            setActivityName(user.activities[activityIndex].name);
+            setActivityName(user.activities[activityIndex].type);
+            setActivityName(user.activities[activityIndex].duration);
+            setActivityName(user.activities[activityIndex].date);
+            setActivityName(user.activities[activityIndex].description);
+        } 
+    }, [user.isUpdateId]);
 
     const newActivityFormSubmit = (e) => {
         e.preventDefault();
@@ -36,7 +48,7 @@ const NewActivityModal = () => {
     }
 
     return (
-        <div className="modal fade" id="NewActivityModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div className="modal fade" id="UpdateActivityModal" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex={-1} aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
 
@@ -73,7 +85,7 @@ const NewActivityModal = () => {
                             </div>
                         </div>
                         <div className="modal-footer d-flex justify-content-between" style={{ backgroundColor: "#d1dedf" }}>
-                            <button type="submit" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#263159", color: "white", borderRadius: "25px" }}>Add Activity</button>
+                            <button type="submit" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#263159", color: "white", borderRadius: "25px" }}>Update Activity</button>
                             <button type="button" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#EB455F", color: "white", borderRadius: "25px" }}>Cancel Activity</button>
                         </div>
                     </form>
@@ -84,4 +96,4 @@ const NewActivityModal = () => {
     )
 }
 
-export default NewActivityModal;
+export default UpdateActivityModal;
