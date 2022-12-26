@@ -1,5 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
+import NewActivityModal from './NewActivityModal';
+import UpdateActivityModal from './UpdateActivityModal';
 import ListActivities from './ListActivities';
 
 import './css/Home.css';
@@ -15,6 +17,9 @@ const Home = () => {
             <div className="container">
                 <ListActivities />
             </div>
+
+            <NewActivityModal />
+            <UpdateActivityModal />
         </UserActivitesProvider>
     );
 }

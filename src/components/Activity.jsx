@@ -29,7 +29,7 @@ const Activity = ({activity}) => {
                     <h6 className="heading mt-4">{activity.description}</h6>
                     <div className="mt-4 d-flex justify-content-between">
                         <button className="card-btn btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#UpdateActivityModal" onClick={(e) => user.updateId(activity.id)}>UPDATE</button>
-                        <button className="card-btn btn btn-outline-danger">DELETE</button>
+                        <button className="card-btn btn btn-outline-danger" onClick={(e) => user.deleteActivity(activity.id)}>DELETE</button>
                     </div>
                 </div>
             </div>

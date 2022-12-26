@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Activity from './Activity';
-import UpdateActivityModal from './UpdateActivityModal';
+// import UpdateActivityModal from './UpdateActivityModal';
 
 import './css/ListActivities.css';
 
@@ -10,7 +10,7 @@ import { UserActivitiesContext } from '../context/UserActivitesContext';
 
 const ListActivities = () => {
     const user = useContext(UserActivitiesContext);
-    
+
     return (
         <>
             <ul className="list-group">
@@ -25,7 +25,7 @@ const ListActivities = () => {
                 }
             </ul>
 
-            <UpdateActivityModal />
+            {/* <UpdateActivityModal /> */}
         </>
     );
 }

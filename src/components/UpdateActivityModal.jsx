@@ -14,28 +14,31 @@ const UpdateActivityModal = () => {
     const [activityDescription, setActivityDescription] = useState("");
 
     useEffect(() => {
-        if(user.isUpdateId !== null) {
+        if(user.isUpdateId > -1) {
             let activityIndex = user.activities.findIndex(activity => activity.id === user.isUpdateId);
-            alert(activityIndex);
             setActivityName(user.activities[activityIndex].name);
-            setActivityName(user.activities[activityIndex].type);
-            setActivityName(user.activities[activityIndex].duration);
-            setActivityName(user.activities[activityIndex].date);
-            setActivityName(user.activities[activityIndex].description);
+            setActivityType(user.activities[activityIndex].type);
+            setActivityDuration(user.activities[activityIndex].duration);
+            setActivityDate(user.activities[activityIndex].date);
+            setActivityDescription(user.activities[activityIndex].description);
         } 
     }, [user.isUpdateId]);
 
-    const newActivityFormSubmit = (e) => {
+    const updateActivityFormSubmit = (e) => {
         e.preventDefault();
-        const newActivityObj = {
-            id: Math.floor(Math.random() * 1000), // int
+        
+        let tempObj = {
+            id: user.isUpdateId, // int
             name: activityName, // str
             type: activityType, // int
             duration: activityDuration, // str
             date: activityDate, // str
             description: activityDescription // str
         }
-        user.addNewActivity(newActivityObj);
+
+        // let activityIndex = user.activities.findIndex(activity => activity.id === user.isUpdateId);
+        // console.log(user.activities[activityIndex]);
+        user.updateActivity(tempObj, user.isUpdateId);
         cleanupFields();
     }
 
@@ -52,7 +55,7 @@ const UpdateActivityModal = () => {
             <div className="modal-dialog">
                 <div className="modal-content">
 
-                    <form onSubmit={newActivityFormSubmit}>
+                    <form onSubmit={updateActivityFormSubmit}>
                         <div className="modal-header p-0">
                             <img src="img/modal/activity.jpg" className="image-fluid" alt="" srcSet='' style={{ width: "498px", height: "auto", borderRadius: "7px" }} />
                         </div>
@@ -86,7 +89,7 @@ const UpdateActivityModal = () => {
                         </div>
                         <div className="modal-footer d-flex justify-content-between" style={{ backgroundColor: "#d1dedf" }}>
                             <button type="submit" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#263159", color: "white", borderRadius: "25px" }}>Update Activity</button>
-                            <button type="button" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#EB455F", color: "white", borderRadius: "25px" }}>Cancel Activity</button>
+                            <button type="button" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#EB455F", color: "white", borderRadius: "25px" }} onClick={(e) => user.updateId(-1)}>Cancel Activity</button>
                         </div>
                     </form>
 

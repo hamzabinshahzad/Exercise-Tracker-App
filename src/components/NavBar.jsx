@@ -1,5 +1,5 @@
 import React from 'react';
-import NewActivityModal from './NewActivityModal';
+// import NewActivityModal from './NewActivityModal';
 
 import './css/NavBar.css';
 
@@ -19,7 +19,7 @@ export const NavBar = () => {
                 </div>
             </nav>
 
-            <NewActivityModal />
+            {/* <NewActivityModal /> */}
         </>
     );
 }
