@@ -5,45 +5,38 @@ import './css/Landing.css';
 
 const Landing = () => {
     return (
-        <section className="vh-100 section">
+        <section id='landing-section' className="vh-100 section">
             <div className="container-fluid">
-                <div className="row">
-                    <div className="col-12">
-                        <nav id='navbar-landing' className="navbar navbar-expand-lg d-flex">
-                            <a className="navbar-brand" href="#" style={{color: "white"}}>Exercise Tracker</a>
-                            <div className="nav-button">
-                                <Link to={'/signin'}>
-                                    <button className="nav-login">Log In</button>
-                                </Link>
-                                <Link to={'/signup'}>
-                                    <button className="nav-signup">Sign Up</button>
-                                </Link>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-
-                <div className="row d-flex  justify-content-around align-items-center h-100">
-                    <div className="col-md-6 col-lg-6 col-xl-6 mt-5">
-                        <div className="left-side">
-                            <div>
-                                <span className="text">“Once you are exercising regularly</span>
-                            </div>
-                            <div>
-                                <span className="text" style={{marginLeft: "4px"}}>the hardest thing is to stop it.”</span>
-                            </div>
-                            <div className="links">
-                                <a href="/login.html" className="btn">Get Started</a>
-
-                            </div>
+               <div id='landing-main-row' className="row">
+                {/* left */}
+                <div className="col-5">
+                    <div className="row mt-4 pt-0 d-flex align-items-center">
+                        <div className="col d-flex align-items-center justify-content-center">
+                            {/* logo */}
+                            <img id="landing-logo" src="img/common/Exercise Tracker Logo-4.png" alt="" />
                         </div>
                     </div>
-                    <div className="col-md-6 col-lg-6 col-xl-6">
-                        <div className="right-side">
-                            <img src="img/landing/landing1.png" alt="" className="img-fluid" />
+                    <div className="row mt-5">
+                        <div id="landing-quote" className="col d-flex align-items-center justify-content-center">
+                            {/* text */}
+                            <div>
+                                <h2>“The body achieves what the mind</h2>
+                                <h2 id='landing-believes'>believes.”</h2>
+                            </div>   
+                        </div>
+                        <div className='d-flex align-items-center justify-content-center gap-5 pt-5 mt-5'>
+                                <button className='btn btn-secondary'>Sign In</button>
+                                <button className='btn btn-success'>Sign Up</button>
                         </div>
                     </div>
                 </div>
+                {/* right */}
+                <div className="col-7 d-flex align-items-center justify-content-center">
+                    <div id='landing-animation-card' className='card d-flex align-items-center'>
+                        <img id='landing-animation-gif' src="gif/landing-animation.gif" alt="" />
+                    </div>
+                </div>
+               </div>
             </div>
         </section>
     );

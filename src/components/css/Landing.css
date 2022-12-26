@@ -5,10 +5,6 @@
     color: white;
 }
 
-.landingSection {
-    background-color: #263159;
-}
-
 .left-side {
     margin-top: 20px;
     margin-left: 120px;
@@ -24,14 +20,14 @@
     padding: 7px 0px;
 }
 
-.btn {
+/* .btn {
     text-decoration: none;
     background-color: aliceblue;
     padding: 7px 10px;
     border: none;
     border-radius: 6px;
     color: black;
-}
+} */
 
 .nav-login {
     height: 36px;
@@ -51,4 +47,53 @@
     border: none;
     border-radius: 27px;
     color: black;
+}
+
+
+
+
+/* NEW */
+#landing-logo {
+    height: auto;
+    max-height: auto;
+    width: 400px;
+    max-width: 400px;
+
+    margin-bottom: 50px;
+}
+
+#landing-quote {
+    color: #eee;
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+#landing-believes{
+    text-align: left;
+}
+
+#landing-main-row {
+    padding-top: 10vh;
+}
+
+#landing-animation-card {
+    background-color: #918d8d8e;
+    border-radius: 50px;
+    border: 2px solid #00ba89;
+
+    max-width: 45vw;
+    padding: 10rem 0;
+
+    box-shadow: 1px 1px 10px 1px #00ba89;
+}
+
+#landing-animation-gif {
+    height: auto;
+    max-height: auto;
+    width: 50%;
+    max-width: 50%;
+}
+
+#landing-section {
+    background-color: #263159;
 }
