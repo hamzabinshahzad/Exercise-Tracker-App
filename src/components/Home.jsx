@@ -5,18 +5,23 @@ import UpdateActivityModal from './UpdateActivityModal';
 import ListActivities from './ListActivities';
 
 import './css/Home.css';
+import setBodyColor from '../setBodyColor';
 
 // Provider
 import { UserActivitesProvider } from '../context/UserActivitesContext';
 
 
 const Home = () => {
+    setBodyColor({color: "#eee"});
+
     return (
         <UserActivitesProvider>
-            <NavBar />
-            <div className="container">
-                <ListActivities />
-            </div>
+            {/* <section id='home-section' className='vh-100'> */}
+                <NavBar />
+                <div id='home-container' className="container">
+                    <ListActivities />
+                </div>
+            {/* </section> */}
 
             <NewActivityModal />
             <UpdateActivityModal />

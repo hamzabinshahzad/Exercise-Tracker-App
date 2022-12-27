@@ -1,17 +1,23 @@
-body, html {
+/* body, html {
     margin: 0;
-}
+} */
 
-body {
+/* body {
     background-color: #eee;
     height: 100vh;
+} */
+
+#home-section {
+    background-color: #eee;
+    height: 100%;
+    min-height: 100%;
 }
 
-.container {
+#home-container {
     margin-top: 5vh;
 }
 
-.col-md-4 {
+/* .col-md-4 {
     text-align: center;
     align-content: center;
-}
+} */

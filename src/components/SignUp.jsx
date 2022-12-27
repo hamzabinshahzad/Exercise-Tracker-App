@@ -1,16 +1,21 @@
 import React from 'react';
 import './css/SignUp.css';
+import setBodyColor from '../setBodyColor';
 
 const SignUp = () => {
+    setBodyColor({color:"#263159"})
     return (
         <section className="vh-100">
             <div className="container py-5 h-100">
-                <div className="row d-flex  justify-content-center h-100 shadow  mb-5 bg-white rounded">
-                    <div className="col-md-8 col-lg-7 col-xl-6 image-col">
+                <div id='signup-main-row' className="row d-flex  justify-content-center h-100 shadow  mb-5 bg-white rounded">
+
+                    <div className="col-md-8 col-lg-7 col-xl-6 image-col d-flex align-items-center">
                         <img src="img/signup/reg.png" className="img-fluid" alt="Phone " />
                     </div>
-                    <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1 form-col">
+
+                    <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1 form-col d-flex align-items-center">
                         <form className="form needs-validation" novalidate>
+                        <img id='signin-logo' src="img/common/Exercise Tracker Logo-4.png" alt="" />
                             {/* Name input */}
                             <div className="form-outline">
                                 <label className="form-label" for="validationCustom01" >First Name</label>
@@ -41,7 +46,7 @@ const SignUp = () => {
                             </div>
 
                             {/* submitButton */}
-                            <button type="submit" className="btn">Sign up</button>
+                            <button type="submit" className="btn btn-outline-success">Sign up</button>
                         </form>
                     </div>
                 </div>

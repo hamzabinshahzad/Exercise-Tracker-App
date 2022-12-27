@@ -5,7 +5,6 @@ export const UserActivitiesContext = React.createContext();
 export const UserActivitesProvider = ({ children }) => {
     const [activities, setActivities] = useState([]);
     const [isUpdateId, setIsUpdateId] = useState(-1);
-    const [isDeleteId, setIsDeleteId] = useState(-1);
 
     const updateId = (id) => {
         setIsUpdateId(id);
@@ -17,7 +16,6 @@ export const UserActivitesProvider = ({ children }) => {
 
     const deleteActivity = (id) => {
         let activityIndex = activities.findIndex(activity => activity.id === id);
-        // setActivities(curr => curr.filter(activities => activities !== id));
         let changedActivities = [...activities];
         changedActivities.splice(activityIndex, 1);
         setActivities(changedActivities);

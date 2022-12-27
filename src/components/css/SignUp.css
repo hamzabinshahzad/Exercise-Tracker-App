@@ -6,8 +6,8 @@
     background: #eee;
 }
 
-section {
-    background-color: #E5E5CB;
+#signup-main-row{
+    min-height: 40rem;
 }
 
 .form-outline {
@@ -19,23 +19,12 @@ section {
     height: 35px;
 }
 
-/* .btn {
-    width: 270px;
-    height: 35px;
-    background: #566e67;
-    border-radius: 2px;
-    font-size: 15px;
-    outline: none;
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 3px;
-} */
 
 .image-col {
     background-color: #566e67;
 }
 
 
-.form {
+/* .form {
     margin-top: 60px;
-}
+} */

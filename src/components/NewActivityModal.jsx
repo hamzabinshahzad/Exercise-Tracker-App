@@ -68,13 +68,13 @@ const NewActivityModal = () => {
                                     <input type="Date" required className="form-control" value={activityDate} onChange={e => setActivityDate(e.target.value)} />
 
                                     <h6>Description</h6>
-                                    <textarea name="" id="" cols="30" rows="5" className="form-control" maxLength={100} value={activityDescription} onChange={e => setActivityDescription(e.target.value)} ></textarea>
+                                    <textarea name="" id="" cols="30" rows="5" className="form-control" maxLength={100} value={activityDescription} onChange={e => setActivityDescription(e.target.value)}></textarea>
                                 </div>
                             </div>
                         </div>
                         <div className="modal-footer d-flex justify-content-between" style={{ backgroundColor: "#d1dedf" }}>
                             <button type="submit" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#263159", color: "white", borderRadius: "25px" }}>Add Activity</button>
-                            <button type="button" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#EB455F", color: "white", borderRadius: "25px" }}>Cancel Activity</button>
+                            <button type="button" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#EB455F", color: "white", borderRadius: "25px" }} onClick={cleanupFields}>Cancel Activity</button>
                         </div>
                     </form>
 
