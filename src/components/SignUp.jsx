@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import DialogModal from './DialogModal';
 
 import './css/SignUp.css';
@@ -11,6 +12,7 @@ import { cleanup } from '@testing-library/react';
 
 const SignUp = () => {
     setBodyColor({ color: "#263159" });
+    const navigate = useNavigate();
 
     const user = useContext(UserActivitiesContext); // pending
     const [firstName, setFirstName] = useState("");
@@ -55,8 +57,9 @@ const SignUp = () => {
         try {
             let rawData = await fetch("http://127.0.0.1:5000/register", options);
             let data = await rawData.json();
-            alert("Registeration Successful! Proceed to signin");
-            console.log(data);
+            alert("Registeration Successful! Click OK to proceed to signin page.");
+            navigate("/signin");
+            // console.log(data);
         } catch (e) {
             alert("Your Registration failed due to a network error, please try again later.");
             // setDialogTitle("FAILED");

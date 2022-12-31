@@ -1,19 +1,54 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // temp for testing
+import React, { useContext, useState } from 'react';
+import { Link, redirect, useNavigate } from 'react-router-dom'; // temp for testing
 
 import './css/SignIn.css';
 import setBodyColor from '../setBodyColor';
 
+// Context
+import { UserContext } from '../context/UserContext';
 
 const SignIn = () => {
     setBodyColor({ color: "#263159" });
+    const userDetails = useContext(UserContext);
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const submitSignin = (e) => {
         e.preventDefault();
+        let credentials = {
+            email,
+            password
+        }
 
+        getUser(credentials);
+    }
+
+    const getUser = async (credentials) => {
+        let options = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(credentials)
+        };
+
+        try {
+            let rawData = await fetch("http://127.0.0.1:5000/login", options);
+            let resData = await rawData.json();
+            alert("SignIn Successfull!");
+            userDetails.initializeUserDetails(resData);
+            navigate("/home");
+            // redirect("/home");
+            userDetails.show();
+            // console.log(resData);
+        } catch (e) {
+            alert("Your Registration failed due to a network error, please try again later.");
+            // setDialogTitle("FAILED");
+            // setDialogMessage("Your registration failed due to a network error, please try again later.");
+            console.log(e);
+        }
     }
 
     return (

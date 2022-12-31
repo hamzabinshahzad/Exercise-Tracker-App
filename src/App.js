@@ -12,19 +12,22 @@ import Home from './components/Home';
 
 // Provider
 import { UserActivitesProvider } from './context/UserActivitesContext';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return (
-    <UserActivitesProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Landing />} />
-          <Route path='/signin' element={<SignIn />} />
-          <Route path='/signup' element={<SignUp />} />
-          <Route path='/home' element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </UserActivitesProvider>
+    <UserProvider>
+      <UserActivitesProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Landing />} />
+            <Route path='/signin' element={<SignIn />} />
+            <Route path='/signup' element={<SignUp />} />
+            <Route path='/home' element={<Home />} />
+          </Routes>
+        </BrowserRouter>
+      </UserActivitesProvider>
+    </UserProvider>
   );
 }
 

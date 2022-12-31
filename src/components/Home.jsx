@@ -7,9 +7,6 @@ import ListActivities from './ListActivities';
 import './css/Home.css';
 import setBodyColor from '../setBodyColor';
 
-// Provider
-import { UserActivitesProvider } from '../context/UserActivitesContext';
-
 
 const Home = () => {
     setBodyColor({ color: "#eee" });
