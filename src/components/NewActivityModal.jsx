@@ -24,6 +24,10 @@ const NewActivityModal = () => {
             description: activityDescription // str
         }
         user.addNewActivity(newActivityObj);
+
+        // dismiss modal:
+        document.querySelector("#NewActivityModal").setAttribute('data-bs-dimiss', 'modal');
+
         cleanupFields();
     }
 
@@ -73,7 +77,7 @@ const NewActivityModal = () => {
                             </div>
                         </div>
                         <div className="modal-footer d-flex justify-content-between" style={{ backgroundColor: "#d1dedf" }}>
-                            <button type="submit" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#263159", color: "white", borderRadius: "25px" }}>Add Activity</button>
+                            <button type="submit" className="btn" style={{ backgroundColor: "#263159", color: "white", borderRadius: "25px" }}>Add Activity</button>
                             <button type="button" className="btn" data-bs-dismiss="modal" style={{ backgroundColor: "#EB455F", color: "white", borderRadius: "25px" }} onClick={cleanupFields}>Cancel Activity</button>
                         </div>
                     </form>

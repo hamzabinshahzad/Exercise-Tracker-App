@@ -12,20 +12,18 @@ import { UserActivitesProvider } from '../context/UserActivitesContext';
 
 
 const Home = () => {
-    setBodyColor({color: "#eee"});
+    setBodyColor({ color: "#eee" });
 
     return (
-        <UserActivitesProvider>
-            {/* <section id='home-section' className='vh-100'> */}
-                <NavBar />
-                <div id='home-container' className="container">
-                    <ListActivities />
-                </div>
-            {/* </section> */}
+        <>
+            <NavBar />
+            <div id='home-container' className="container">
+                <ListActivities />
+            </div>
 
             <NewActivityModal />
             <UpdateActivityModal />
-        </UserActivitesProvider>
+        </>
     );
 }
 
