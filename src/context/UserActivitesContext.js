@@ -10,8 +10,26 @@ export const UserActivitesProvider = ({ children }) => {
         setIsUpdateId(id);
     }
 
+    const sendActivity = async (newActivity) => {
+        var options = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(newActivity)
+        };
+
+        try {
+            await fetch("http://127.0.0.1:5000/activity", options);
+            return true;
+        } catch (e) {
+            alert("Failed to push activity to server, network error!");
+           return false;
+        }
+    }
+
     const addNewActivity = (newActivity) => {
-        setActivities(activities => [...activities, newActivity]);
+        if(sendActivity(newActivity)) setActivities(activities => [...activities, newActivity]);
     }
 
     const deleteActivity = (id) => {
@@ -19,6 +37,10 @@ export const UserActivitesProvider = ({ children }) => {
         let changedActivities = [...activities];
         changedActivities.splice(activityIndex, 1);
         setActivities(changedActivities);
+    }
+
+    const deleteAllActivities = () => {
+        setActivities([]);
     }
     
     const updateActivity = (tempObj, id) => {
@@ -40,7 +62,8 @@ export const UserActivitesProvider = ({ children }) => {
         updateId,
         addNewActivity,
         updateActivity,
-        deleteActivity
+        deleteActivity,
+        deleteAllActivities
     }
 
     return (

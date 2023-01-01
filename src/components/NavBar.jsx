@@ -1,13 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import NewActivityModal from './NewActivityModal';
 
 import './css/NavBar.css';
 
 // Context
 import { UserContext } from '../context/UserContext';
+import { UserActivitiesContext } from '../context/UserActivitesContext';
 
 export const NavBar = () => {
     const userDetails = useContext(UserContext);
+    const userActivites = useContext(UserActivitiesContext);
+    const [firstname, setFirstName] = useState(userDetails.firstName);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        setFirstName(userDetails.firstName);
+    }, [userDetails.firstName]);
+
+    const signOutUser = () => {
+        userDetails.resetUserDetails();
+        userActivites.deleteAllActivities();
+        navigate('/');
+    }
 
     return (
         <>
@@ -17,10 +32,16 @@ export const NavBar = () => {
                     <div className="activity-button">
                         <button className="nav-button" data-bs-toggle="modal" data-bs-target="#NewActivityModal">+ New Activity</button>
                     </div>
-                    <div className="user">
-                        <span style={{ color: "white", fontWeight: "600" }}>{`Welcome, ${userDetails.firstName}!`}</span>
-                        <img src="img/home/default-avatar-icon-white-png.png" alt="" />
+
+                    <div id='navbar-user' className="dropdown">
+                        <span style={{ color: "white", fontWeight: "600" }}>{`Welcome, ${firstname}!`}</span>
+                        <img src="img/home/default-avatar-icon-white-png.png" alt="" data-bs-toggle="dropdown" />
+
+                        <ul className="dropdown-menu dropdown-menu-lg-end mt-2">
+                            <li><span id='navbar-signout-item' className="dropdown-item" onClick={signOutUser}>Sign Out</span></li>
+                        </ul>
                     </div>
+
                 </div>
             </nav>
 

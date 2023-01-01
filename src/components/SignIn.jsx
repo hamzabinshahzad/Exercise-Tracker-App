@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, redirect, useNavigate } from 'react-router-dom'; // temp for testing
+import { useNavigate } from 'react-router-dom'; // temp for testing
 
 import './css/SignIn.css';
 import setBodyColor from '../setBodyColor';
@@ -39,9 +39,11 @@ const SignIn = () => {
             let resData = await rawData.json();
             alert("SignIn Successfull!");
             userDetails.initializeUserDetails(resData);
+            userDetails.setSignInStatus(true);
+            // console.log(userDetails.getSignInStatus());
             navigate("/home");
             // redirect("/home");
-            userDetails.show();
+            // userDetails.show();
             // console.log(resData);
         } catch (e) {
             alert("Your Registration failed due to a network error, please try again later.");
@@ -58,7 +60,7 @@ const SignIn = () => {
                     <img src="img/signin/logimg.png" className="img-fluid" alt="Phone" />
                 </div>
                 <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1 form-col">
-                    <img id='signin-logo' src="img/common/Exercise Tracker Logo-4.png" alt="" />
+                    <img id='signin-logo' src="img/common/Exercise Tracker Logo-4-new-2-alt.png" alt="" />
                     <form className="form" onSubmit={submitSignin}>
                         {/* Email input */}
                         <div className="form-group">

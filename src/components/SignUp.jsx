@@ -1,20 +1,18 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import DialogModal from './DialogModal';
 
 import './css/SignUp.css';
 import setBodyColor from '../setBodyColor';
 
 // Context
-import { UserActivitiesContext } from '../context/UserActivitesContext';
-import { cleanup } from '@testing-library/react';
+// import { UserActivitiesContext } from '../context/UserActivitesContext';
 
 
 const SignUp = () => {
     setBodyColor({ color: "#263159" });
     const navigate = useNavigate();
 
-    const user = useContext(UserActivitiesContext); // pending
+    // const user = useContext(UserActivitiesContext); // pending
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -64,7 +62,7 @@ const SignUp = () => {
             alert("Your Registration failed due to a network error, please try again later.");
             // setDialogTitle("FAILED");
             // setDialogMessage("Your registration failed due to a network error, please try again later.");
-            console.log(e);
+            // console.log(e);
         }
     }
 
@@ -83,7 +81,7 @@ const SignUp = () => {
 
                         <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1 form-col d-flex align-items-center">
                             <form className="form needs-validation" onSubmit={submitRegisteration}>
-                                <img id='signin-logo' src="img/common/Exercise Tracker Logo-4.png" alt="" />
+                                <img id='signin-logo' src="img/common/Exercise Tracker Logo-4-new-2-alt.png" alt="" />
                                 {/* Name input */}
                                 <div className="form-outline">
                                     <label className="form-label" htmlFor="firstNameInput" >First Name</label>

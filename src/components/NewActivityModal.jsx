@@ -3,9 +3,11 @@ import './css/ActivityModal.css';
 
 // Context
 import { UserActivitiesContext } from '../context/UserActivitesContext';
+import { UserContext } from '../context/UserContext';
 
 const NewActivityModal = () => {
     const user = useContext(UserActivitiesContext);
+    const userDetails = useContext(UserContext);
 
     const [activityName, setActivityName] = useState("");
     const [activityType, setActivityType] = useState("Run");
@@ -21,7 +23,8 @@ const NewActivityModal = () => {
             type: activityType, // int
             duration: activityDuration, // str
             date: activityDate, // str
-            description: activityDescription // str
+            description: activityDescription, // str
+            userId: userDetails.getUserId() // str
         }
         user.addNewActivity(newActivityObj);
 

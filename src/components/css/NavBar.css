@@ -48,9 +48,26 @@
     color: white;
 }
 
-.user img {
+#navbar-user img {
     width: 50px;
     height: auto;
 
+    border-radius: 100%;
     margin-left: 5px;
 }
+
+#navbar-user img:hover {
+    background-color: #00B8A9;
+}
+
+#navbar-signout-item {
+    font-weight: 600;
+}
+
+#navbar-signout-item:hover {
+    background-color: #00B8A9;
+    color: white;
+
+    cursor: pointer;
+}
+
