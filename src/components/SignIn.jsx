@@ -23,6 +23,12 @@ const SignIn = () => {
         }
 
         getUser(credentials);
+        cleanupForm();
+    }
+
+    const cleanupForm = () => {
+        setEmail("");
+        setPassword("");
     }
 
     const getUser = async (credentials) => {
@@ -37,21 +43,15 @@ const SignIn = () => {
         try {
             let rawData = await fetch("http://127.0.0.1:5000/login", options);
             let resData = await rawData.json();
-            alert("SignIn Successfull!");
+            alert("Sign In Successful!");
             userDetails.initializeUserDetails(resData);
             userDetails.setSignInStatus(true);
-            // console.log(userDetails.getSignInStatus());
             navigate("/home");
-            // redirect("/home");
-            // userDetails.show();
-            // console.log(resData);
         } catch (e) {
-            alert("Your Registration failed due to a network error, please try again later.");
-            // setDialogTitle("FAILED");
-            // setDialogMessage("Your registration failed due to a network error, please try again later.");
-            console.log(e);
-        }
+            alert("Sign In failed due to incorrect credentials or network error, please try again later.");
+        } 
     }
+
 
     return (
         <div className="container py-5 h-100">

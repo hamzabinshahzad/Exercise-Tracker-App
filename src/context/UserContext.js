@@ -39,31 +39,6 @@ export const UserProvider = ({ children }) => {
         setAuthToken("");
     }
 
-
-    // const addNewActivity = (newActivity) => {
-    //     setActivities(activities => [...activities, newActivity]);
-    // }
-
-    // const deleteActivity = (id) => {
-    //     let activityIndex = activities.findIndex(activity => activity.id === id);
-    //     let changedActivities = [...activities];
-    //     changedActivities.splice(activityIndex, 1);
-    //     setActivities(changedActivities);
-    // }
-    
-    // const updateActivity = (tempObj, id) => {
-    //     let activityIndex = activities.findIndex(curr_activity => curr_activity.id === id);
-    //     let activity = activities[activityIndex];
-
-    //     activity.name = tempObj.name;
-    //     activity.type = tempObj.type;
-    //     activity.duration = tempObj.duration;
-    //     activity.date = tempObj.date;
-    //     activity.description = tempObj.description;
-
-    //     setIsUpdateId(-1);
-    // }
-
     const superSet = {
         setSignInStatus,
         getSignInStatus,

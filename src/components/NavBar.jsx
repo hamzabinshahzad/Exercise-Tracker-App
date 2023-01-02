@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import NewActivityModal from './NewActivityModal';
 
 import './css/NavBar.css';
 
@@ -44,8 +43,6 @@ export const NavBar = () => {
 
                 </div>
             </nav>
-
-            {/* <NewActivityModal /> */}
         </>
     );
 }

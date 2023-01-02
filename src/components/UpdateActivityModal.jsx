@@ -3,9 +3,11 @@ import './css/ActivityModal.css';
 
 // Context
 import { UserActivitiesContext } from '../context/UserActivitesContext';
+import { UserContext } from '../context/UserContext';
 
 const UpdateActivityModal = () => {
     const user = useContext(UserActivitiesContext);
+    const userDetails = useContext(UserContext);
 
     const [activityName, setActivityName] = useState("");
     const [activityType, setActivityType] = useState("Run");
@@ -33,11 +35,10 @@ const UpdateActivityModal = () => {
             type: activityType, // int
             duration: activityDuration, // str
             date: activityDate, // str
-            description: activityDescription // str
+            description: activityDescription, // str
+            userId: userDetails.getUserId()
         }
 
-        // let activityIndex = user.activities.findIndex(activity => activity.id === user.isUpdateId);
-        // console.log(user.activities[activityIndex]);
         user.updateActivity(tempObj, user.isUpdateId);
         cleanupFields();
     }

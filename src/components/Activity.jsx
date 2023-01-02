@@ -3,11 +3,13 @@ import './css/Activity.css';
 
 // Context
 import { UserActivitiesContext } from '../context/UserActivitesContext';
+import { UserContext } from '../context/UserContext';
 
 
 const Activity = ({activity}) => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const user = useContext(UserActivitiesContext);
+    const userDetails = useContext(UserContext);
 
     return (
         <div className="col-sm-12 col-lg-12">
@@ -29,7 +31,7 @@ const Activity = ({activity}) => {
                     <h6 className="heading mt-4">{activity.description}</h6>
                     <div className="mt-4 d-flex justify-content-between">
                         <button className="card-btn btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#UpdateActivityModal" onClick={(e) => user.updateId(activity.id)}>UPDATE</button>
-                        <button className="card-btn btn btn-outline-danger" onClick={(e) => user.deleteActivity(activity.id)}>DELETE</button>
+                        <button className="card-btn btn btn-outline-danger" onClick={(e) => user.deleteActivity(activity.id, userDetails.getUserId())}>DELETE</button>
                     </div>
                 </div>
             </div>

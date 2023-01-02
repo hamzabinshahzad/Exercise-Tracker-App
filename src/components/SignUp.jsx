@@ -4,23 +4,15 @@ import { useNavigate } from 'react-router-dom';
 import './css/SignUp.css';
 import setBodyColor from '../setBodyColor';
 
-// Context
-// import { UserActivitiesContext } from '../context/UserActivitesContext';
-
 
 const SignUp = () => {
     setBodyColor({ color: "#263159" });
     const navigate = useNavigate();
 
-    // const user = useContext(UserActivitiesContext); // pending
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    // Dialog Modal data:
-    // const [dialogMessage, setDialogMessage] = useState("Your registeration was successful!");
-    // const [dialogTitle, setDialogTitle] = useState("SUCCESS");
 
     const submitRegisteration = (e) => {
         e.preventDefault();
@@ -57,21 +49,14 @@ const SignUp = () => {
             let data = await rawData.json();
             alert("Registeration Successful! Click OK to proceed to signin page.");
             navigate("/signin");
-            // console.log(data);
         } catch (e) {
             alert("Your Registration failed due to a network error, please try again later.");
-            // setDialogTitle("FAILED");
-            // setDialogMessage("Your registration failed due to a network error, please try again later.");
-            // console.log(e);
         }
     }
 
     return (
         <>
             <section className="vh-100">
-                {/* <div className="alert alert-success" role="alert">
-                    This is a success alert—check it out!
-                </div> */}
                 <div className="container py-5 h-100">
                     <div id='signup-main-row' className="row d-flex  justify-content-center h-100 shadow  mb-5 bg-white rounded">
 
@@ -118,8 +103,6 @@ const SignUp = () => {
                     </div>
                 </div>
             </section>
-
-            {/* <DialogModal title={dialogTitle} message={dialogMessage}/> */}
         </>
     );
 }

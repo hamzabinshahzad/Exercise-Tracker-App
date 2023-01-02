@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
 import Activity from './Activity';
-// import UpdateActivityModal from './UpdateActivityModal';
 
 import './css/ListActivities.css';
 
@@ -24,8 +23,6 @@ const ListActivities = () => {
                     })
                 }
             </ul>
-
-            {/* <UpdateActivityModal /> */}
         </>
     );
 }
