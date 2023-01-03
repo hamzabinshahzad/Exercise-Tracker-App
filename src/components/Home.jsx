@@ -24,7 +24,7 @@ const Home = () => {
 
     const getActivities = async (userId) => {
         try {
-            let rawData = await fetch(`http://127.0.0.1:5000/getactivities/?userid=${userId}`);
+            let rawData = await fetch(`https://good-lime-meerkat-hat.cyclic.app/getactivities/?userid=${userId}`);
             let resData = await rawData.json();
             resData.forEach((activity) => userActivities.initializeNewActivity(activity));
             return true;

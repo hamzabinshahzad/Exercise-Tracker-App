@@ -45,7 +45,7 @@ const SignUp = () => {
         };
 
         try {
-            let rawData = await fetch("http://127.0.0.1:5000/register", options);
+            let rawData = await fetch("https://good-lime-meerkat-hat.cyclic.app/register", options);
             let data = await rawData.json();
             alert("Registeration Successful! Click OK to proceed to signin page.");
             navigate("/signin");

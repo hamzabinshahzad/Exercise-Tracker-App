@@ -21,7 +21,7 @@ export const UserActivitesProvider = ({ children }) => {
         };
 
         try {
-            await fetch("http://127.0.0.1:5000/activity", options);
+            await fetch("https://good-lime-meerkat-hat.cyclic.app/activity", options);
             return true;
         } catch (e) {
             alert("Failed to push activity to server, network error!");
@@ -31,7 +31,7 @@ export const UserActivitesProvider = ({ children }) => {
 
     const sendDeleteActivity = async (id, userId) => {
         try {
-            await fetch(`http://127.0.0.1:5000/deleteactivity/?id=${id}&userid=${userId}`, { method: "DELETE" });
+            await fetch(`https://good-lime-meerkat-hat.cyclic.app/deleteactivity/?id=${id}&userid=${userId}`, { method: "DELETE" });
             return true;
         } catch (e) {
             alert("Failed to delete activity from server, network error!");
@@ -49,7 +49,7 @@ export const UserActivitesProvider = ({ children }) => {
         };
 
         try {
-            await fetch("http://127.0.0.1:5000/updateactivity", options);
+            await fetch("https://good-lime-meerkat-hat.cyclic.app/updateactivity", options);
             return true;
         } catch (e) {
             alert("Failed to Update activity on server, network error!");

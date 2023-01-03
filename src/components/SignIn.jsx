@@ -41,7 +41,7 @@ const SignIn = () => {
         };
 
         try {
-            let rawData = await fetch("http://127.0.0.1:5000/login", options);
+            let rawData = await fetch("https://good-lime-meerkat-hat.cyclic.app/login", options);
             let resData = await rawData.json();
             alert("Sign In Successful!");
             userDetails.initializeUserDetails(resData);
